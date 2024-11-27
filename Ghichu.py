@@ -40,6 +40,7 @@ delete_note = st.selectbox("Chọn ghi chú để xóa", options=notes if notes 
 if st.button("Xóa Ghi Chú"):
     if delete_note != "Không có ghi chú":
         os.remove(f"notes/{delete_note}")
+        st.session_state.notes.remove(delete_note)
         st.warning(f"Ghi chú '{delete_note}' đã bị xóa!")
     else:
         st.info("Không có ghi chú nào để xóa.")
