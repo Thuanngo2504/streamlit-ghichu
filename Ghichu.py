@@ -1,5 +1,22 @@
 import streamlit as st
 import os
+import random
+from backgrounds import backgrounds  # Import danh sách hình nền từ backgrounds.py
+
+# Chọn ngẫu nhiên một hình nền từ danh sách
+background_image = random.choice(backgrounds)
+
+# Chèn CSS để thêm background từ hình ảnh trong thư mục
+st.markdown(f"""
+    <style>
+    .main {{
+        background-image: url('{background_image}');
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
+    }}
+    </style>
+    """, unsafe_allow_html=True)
 
 # Tạo giao diện chính
 st.title("Ứng dụng Ghi Chú")
