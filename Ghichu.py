@@ -41,5 +41,8 @@ if st.button("Xóa Ghi Chú"):
     if delete_note != "Không có ghi chú":
         os.remove(f"notes/{delete_note}")
         st.warning(f"Ghi chú '{delete_note}' đã bị xóa!")
+        # Làm mới ứng dụng để cập nhật lại danh sách ghi chú
+        st.experimental_rerun()
     else:
         st.info("Không có ghi chú nào để xóa.")
+
