@@ -1,10 +1,9 @@
 import streamlit as st
 import os
-import random
 import backgrounds  # Import danh sách hình nền từ backgrounds.py
 
-# Chọn ngẫu nhiên một hình nền từ danh sách
-background_image = random.choice(backgrounds)
+
+background_image = "images/hinh1.png"
 
 # Chèn CSS để thêm background từ hình ảnh trong thư mục
 st.markdown(f"""
