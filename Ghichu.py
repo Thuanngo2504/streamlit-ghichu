@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 import random
-from backgrounds import backgrounds  # Import danh sách hình nền từ backgrounds.py
+import backgrounds  # Import danh sách hình nền từ backgrounds.py
 
 # Chọn ngẫu nhiên một hình nền từ danh sách
 background_image = random.choice(backgrounds)
