@@ -1,11 +1,11 @@
 import streamlit as st
 import os
-import backgrounds  # Import danh sách hình nền từ backgrounds.py
+import backgrounds 
 
 
 background_image = "images/hinh1.png"
 
-# Chèn CSS để thêm background từ hình ảnh trong thư mục
+#  thêm background từ hình ảnh trong thư mục
 st.markdown(f"""
     <style>
     .main {{
@@ -19,9 +19,9 @@ st.markdown(f"""
 
 # Tạo giao diện chính
 st.title("Ứng dụng Ghi Chú")
-st.subheader("Quản lý ghi chú của bạn dễ dàng với Streamlit!")
+st.subheader("Bạn có thể để lại ghi chú của mình ở đây ✍!")
 
-# Tạo thư mục lưu trữ ghi chú nếu chưa có
+# Tạo thư mục lưu trữ ghi chú 
 if not os.path.exists("notes"):
     os.makedirs("notes")
 
